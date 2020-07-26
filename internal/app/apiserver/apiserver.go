@@ -3,7 +3,7 @@ package apiserver
 // APIServer
 type APIServer struct{
 	config *Config
-	logger *logrus.logger
+	//logger *logrus.logger
 }
 
 // New ...
@@ -11,23 +11,23 @@ type APIServer struct{
 func New(config *Config) *APIServer {
 	return &APIServer{
 		config: config,
-		logger: logrus.New(),
+		//logger: logrus.New(),
 	}
 }
 
 
 // Start ...
 func (s *APIServer) Start() error{
-	if err := s.configureLogger(); err != nil {
+	/*if err := s.configureLogger(); err != nil {
 		return err
 	}
 
-	s.logger.Info("starting api server")
+	s.logger.Info("starting api server")*/
 
 	return nil
 }
 
-func (s *APIServer) configureLogger() error{
+/*func (s *APIServer) configureLogger() error{
 	level, err := logrus.ParseLevel(s.config.LogLevel)
 	if err != nil {
 		return err
@@ -36,4 +36,4 @@ func (s *APIServer) configureLogger() error{
 	s.logger.SetLevel(level)
 
 	return nil
-}
+}*/

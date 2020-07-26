@@ -1,4 +1,4 @@
-module github.com/Alexeiyaganov/rest_api
+module github.com/Alexeiyaganov/rest-api
 
 go 1.14
 
